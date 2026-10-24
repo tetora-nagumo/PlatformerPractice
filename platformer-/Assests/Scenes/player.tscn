@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bnl5f1uqgspmn"]
+
+[ext_resource type="Script" uid="uid://dj7qqh32p81jd" path="res://Assests/Scripts/player_controller.gd" id="1_3sr3p"]
+[ext_resource type="Texture2D" uid="uid://o0xjpce0fqn5" path="res://Assests/Sprites/Walk.png" id="1_g31ij"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lolmy"]
+radius = 4.0
+height = 18.0
+
+[node name="player" type="CharacterBody2D" unique_id=536172656]
+script = ExtResource("1_3sr3p")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1398740879]
+zoom = Vector2(6, 6)
+
+[node name="Animator" type="Node2D" parent="." unique_id=564457425]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Animator" unique_id=428453196]
+root_node = NodePath("../..")
+
+[node name="Sprite2D" type="Sprite2D" parent="Animator" unique_id=693167468]
+position = Vector2(-1, -9.000001)
+scale = Vector2(0.546875, 0.546875)
+texture = ExtResource("1_g31ij")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=718882574]
+position = Vector2(0, -9)
+shape = SubResource("CapsuleShape2D_lolmy")

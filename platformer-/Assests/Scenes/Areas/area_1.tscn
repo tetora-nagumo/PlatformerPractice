@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://5xa3xompq0cj"]
+
+[ext_resource type="Texture2D" uid="uid://bd07weltgds6g" path="res://Assests/Sprites/Tilemap.png" id="1_rum28"]
+[ext_resource type="PackedScene" uid="uid://bnl5f1uqgspmn" path="res://Assests/Scenes/player.tscn" id="2_pjihv"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_34vto"]
+texture = ExtResource("1_rum28")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:0/0 = 0
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:0/0 = 0
+7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:0/0 = 0
+8:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:0/0 = 0
+9:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+10:0/0 = 0
+10:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+11:0/0 = 0
+11:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+12:0/0 = 0
+12:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:0/0 = 0
+13:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+14:0/0 = 0
+14:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+15:0/0 = 0
+15:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+16:0/0 = 0
+16:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+18:0/0 = 0
+18:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+19:0/0 = 0
+19:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+17:0/0 = 0
+21:0/0 = 0
+21:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+22:0/0 = 0
+22:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+23:0/0 = 0
+23:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+24:0/0 = 0
+24:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+25:0/0 = 0
+25:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+26:0/0 = 0
+26:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_8buxo"]
+physics_layer_0/collision_layer = 1
+sources/7 = SubResource("TileSetAtlasSource_34vto")
+
+[node name="Area1" type="Node2D" unique_id=851783893]
+
+[node name="TileMap" type="TileMap" parent="." unique_id=407751670]
+position = Vector2(7, 0)
+tile_set = SubResource("TileSet_8buxo")
+rendering_quadrant_size = 1
+format = 2
+layer_0/tile_data = PackedInt32Array(2031631, 7, 0, 2031632, 65543, 0, 2031633, 131079, 0, 2031634, 65543, 0, 2031635, 65543, 0, 2031636, 131079, 0, 2031637, 65543, 0, 2031638, 65543, 0, 2031639, 196615, 0, 2097167, 262151, 0, 2162703, 524295, 0, 2228239, 786439, 0, 2228247, 983047, 0, 2228240, 851975, 0, 2228241, 917511, 0, 2228242, 917511, 0, 2228243, 917511, 0, 2228244, 917511, 0, 2228245, 917511, 0, 2228246, 851975, 268435456, 2162711, 720903, 0, 2097175, 458759, 0, 2097173, 393223, 0, 2097168, 327687, 0, 2097169, 327687, 0, 2097170, 327687, 0, 2097171, 327687, 0, 2097172, 327687, 0, 2097174, 327687, 0, 2162704, 589831, 0, 2162710, 655367, 0, 2162705, 655367, 0, 2162706, 655367, 0, 2162707, 655367, 0, 2162708, 655367, 0, 2162709, 655367, 0, 1835031, 1441799, 0, 1900567, 1507335, 0, 1966103, 1507335, 0, 1900566, 1441799, 0, 1966102, 1507335, 0, 1966101, 1441799, 0)
+
+[node name="player" parent="TileMap" unique_id=536172656 instance=ExtResource("2_pjihv")]
+position = Vector2(249, 496)
