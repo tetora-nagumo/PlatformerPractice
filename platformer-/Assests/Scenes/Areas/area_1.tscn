@@ -31,6 +31,20 @@ _data = {
 }
 point_count = 2
 
+[sub_resource type="Curve2D" id="Curve2D_872jr"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -68)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_mc7o4"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 62.863647, -1.0015259)
+}
+point_count = 2
+
 [node name="Area1" unique_id=851783893 instance=ExtResource("1_50wwi")]
 scale = Vector2(1.0021684, 0.99846405)
 
@@ -59,3 +73,34 @@ position = Vector2(1482.7845, 173.26613)
 scale = Vector2(0.6732321, 1)
 curve = SubResource("Curve2D_7t8mk")
 looping = true
+
+[node name="MovingPlatform5" parent="Platforms" index="4" unique_id=2081875990 instance=ExtResource("3_pjihv")]
+position = Vector2(1141.5248, 587.903)
+scale = Vector2(0.56095207, 1)
+curve = SubResource("Curve2D_872jr")
+path_time = 2.0
+looping = true
+
+[node name="MovingPlatform6" parent="Platforms" index="5" unique_id=1235966291 instance=ExtResource("3_pjihv")]
+position = Vector2(1151.503, 502.77225)
+curve = SubResource("Curve2D_mc7o4")
+path_time = 2.0
+looping = true
+
+[node name="AreaExit" parent="." index="2" unique_id=427532931]
+position = Vector2(1660.3995, 64.09845)
+
+[node name="PickUp" parent="PickUps" parent_id_path=PackedInt32Array(418352624) index="0" unique_id=581777799]
+position = Vector2(1569.5964, 70.10768)
+
+[node name="PickUp2" parent="PickUps" parent_id_path=PackedInt32Array(418352624) index="1" unique_id=1095700399]
+position = Vector2(1335.1049, 294.45227)
+
+[node name="PickUp3" parent="PickUps" parent_id_path=PackedInt32Array(418352624) index="2" unique_id=1919780828]
+position = Vector2(470.9787, 565.86914)
+
+[node name="PickUp4" parent="PickUps" parent_id_path=PackedInt32Array(418352624) index="3" unique_id=306027235]
+position = Vector2(1305.1699, 487.74918)
+
+[node name="PickUp5" parent="PickUps" parent_id_path=PackedInt32Array(418352624) index="4" unique_id=975051739]
+position = Vector2(871.111, 389.5984)

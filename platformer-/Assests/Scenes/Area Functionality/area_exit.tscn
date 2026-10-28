@@ -1,11 +1,15 @@
 [gd_scene format=3 uid="uid://c2xc41v5cds5c"]
 
+[ext_resource type="Script" uid="uid://bmxsbc0guxm7t" path="res://Assests/Scripts/area_exit.gd" id="1_71ms5"]
 [ext_resource type="Texture2D" uid="uid://pgevk5rufwwi" path="res://Assests/Sprites/Portal.png" id="1_xkmxh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6m55w"]
 size = Vector2(17.617315, 14.156189)
 
-[node name="AreaExit" type="Area2D" unique_id=427532931]
+[node name="AreaExit" type="Area2D" unique_id=427532931 node_paths=PackedStringArray("sprite") groups=["area_exits"]]
+collision_layer = 65536
+script = ExtResource("1_71ms5")
+sprite = NodePath("Sprite2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=686796236]
 position = Vector2(-0.49999976, 5.662441e-07)
@@ -13,4 +17,9 @@ scale = Vector2(2.2137306, -2.5430574)
 shape = SubResource("RectangleShape2D_6m55w")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=112261833]
+z_index = -10
 texture = ExtResource("1_xkmxh")
+region_enabled = true
+region_rect = Rect2(44, 0, 41, 40)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

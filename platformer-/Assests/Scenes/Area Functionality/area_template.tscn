@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bd07weltgds6g" path="res://Assests/Sprites/Tilemap.png" id="1_0gxn1"]
 [ext_resource type="PackedScene" uid="uid://bnl5f1uqgspmn" path="res://Assests/Scenes/player.tscn" id="2_d2yrl"]
 [ext_resource type="PackedScene" uid="uid://c2xc41v5cds5c" path="res://Assests/Scenes/Area Functionality/area_exit.tscn" id="3_0gxn1"]
+[ext_resource type="PackedScene" uid="uid://dsi4sas7pp7gd" path="res://Assests/Scenes/pick_up.tscn" id="4_d2yrl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_81vjg"]
 texture = ExtResource("1_0gxn1")
@@ -384,6 +385,7 @@ terrain_set_0/terrain_1/color = Color(0.30980393, 0.5372549, 0.25490198, 1)
 sources/7 = SubResource("TileSetAtlasSource_81vjg")
 
 [node name="AreaTemplate" type="Node2D" unique_id=851783893]
+position = Vector2(61, 2)
 
 [node name="TileMap" type="TileMap" parent="." unique_id=407751670]
 position = Vector2(7, 0)
@@ -402,3 +404,20 @@ jump_power = 10.0
 
 [node name="AreaExit" parent="." unique_id=427532931 instance=ExtResource("3_0gxn1")]
 position = Vector2(302, 478)
+
+[node name="PickUps" type="Node2D" parent="." unique_id=418352624]
+
+[node name="PickUp" parent="PickUps" unique_id=581777799 instance=ExtResource("4_d2yrl")]
+position = Vector2(292, 428)
+
+[node name="PickUp2" parent="PickUps" unique_id=1095700399 instance=ExtResource("4_d2yrl")]
+position = Vector2(307, 427)
+
+[node name="PickUp3" parent="PickUps" unique_id=1919780828 instance=ExtResource("4_d2yrl")]
+position = Vector2(345, 414)
+
+[node name="PickUp4" parent="PickUps" unique_id=306027235 instance=ExtResource("4_d2yrl")]
+position = Vector2(323, 428)
+
+[node name="PickUp5" parent="PickUps" unique_id=975051739 instance=ExtResource("4_d2yrl")]
+position = Vector2(338, 425)
