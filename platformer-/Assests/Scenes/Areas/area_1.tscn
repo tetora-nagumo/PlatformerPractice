@@ -48,6 +48,9 @@ point_count = 2
 [node name="Area1" unique_id=851783893 instance=ExtResource("1_50wwi")]
 scale = Vector2(1.0021684, 0.99846405)
 
+[node name="PlayerStartPosition" parent="." index="0" unique_id=34995561 groups=["area_exits"]]
+position = Vector2(314.31842, 438.67377)
+
 [node name="Platforms" type="Node2D" parent="." index="1" unique_id=1911247198]
 
 [node name="MovingPlatform" parent="Platforms" index="0" unique_id=280751243 instance=ExtResource("3_pjihv")]
@@ -87,7 +90,7 @@ curve = SubResource("Curve2D_mc7o4")
 path_time = 2.0
 looping = true
 
-[node name="AreaExit" parent="." index="2" unique_id=427532931]
+[node name="AreaExit" parent="." index="3" unique_id=427532931]
 position = Vector2(1660.3995, 64.09845)
 
 [node name="PickUp" parent="PickUps" parent_id_path=PackedInt32Array(418352624) index="0" unique_id=581777799]

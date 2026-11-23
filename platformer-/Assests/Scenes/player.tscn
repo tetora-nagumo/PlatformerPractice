@@ -80,11 +80,10 @@ _data = {
 radius = 4.0
 height = 18.0
 
-[node name="player" type="CharacterBody2D" unique_id=536172656]
+[node name="player" type="CharacterBody2D" unique_id=536172656 groups=["player"]]
 collision_mask = 768
 script = ExtResource("1_3sr3p")
 speed = 5.0
-jump_power = 8.0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1398740879]
 zoom = Vector2(5, 5)

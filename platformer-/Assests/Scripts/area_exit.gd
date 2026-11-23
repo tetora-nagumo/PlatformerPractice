@@ -5,7 +5,7 @@ class_name	AreaExit
 
 var is_open = false
 
-func ready():
+func _ready():
 	close()
 	
 	
@@ -20,4 +20,4 @@ func close():
 
 func _on_body_entered(body: Node2D) -> void:
 	if is_open &&  body is PlayerController:
-		GameManager.next_level()
+		GameManager.next_area()

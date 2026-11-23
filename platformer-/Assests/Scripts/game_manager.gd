@@ -1,23 +1,45 @@
 extends Node
 
+var starting_area = 1
 var current_area = 1
 var area_path = "res://Assests/Scenes/Areas/"
 
 var pick_ups = 0
+var area_container : Node2D
+var player : PlayerController
 
 func _ready():
-	reset_pick_ups()
-
-
-func next_level():
-	current_area += 1
-	var full_path = area_path + "area_" + str(current_area) + ".tscn"
-	get_tree().change_scene_to_file(full_path)
-	print("player has moved to area " + str(current_area))
-	set_up_area()
+	area_container = get_tree().get_first_node_in_group("area_container")
+	player = get_tree().get_first_node_in_group("player")
+	load_area(starting_area)
 	
-func set_up_area():
+func load_area(area_number):
+	#checking new scene path
+	var full_path = area_path + "area_" + str(current_area) + ".tscn"
+	#get_tree().change_scene_to_file(full_path)
+	#print("player has moved to area " + str(current_area))
+	var scene = load(full_path) as PackedScene
+	if !scene:
+		return
+		#remove previous scene
+	for child in area_container.get_children():
+		child.queue_free()
+		await child.tree_exited
+		#setting up new scene
+	var instance = scene.instantiate()
+	area_container.add_child(instance)
 	reset_pick_ups()
+	var player_start_position = get_tree().get_first_node_in_group("player_start_position") as Node2D
+	player.teleport_to_location(player_start_position.position)
+
+
+func next_area():
+	current_area += 1
+	
+	load_area(current_area)
+	
+	
+
 	
 func add_pick_ups():
 	pick_ups += 1
